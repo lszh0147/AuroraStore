@@ -33,19 +33,19 @@ import com.aurora.store.events.RxBus;
 import com.aurora.store.installer.Installer;
 import com.aurora.store.installer.InstallerService;
 import com.aurora.store.model.App;
-import com.aurora.store.report.AcraLogSenderFactory;
-import com.aurora.store.report.AcraReportSenderFactory;
+//import com.aurora.store.report.AcraLogSenderFactory;
+//import com.aurora.store.report.AcraReportSenderFactory;
 import com.aurora.store.util.Log;
 import com.aurora.store.util.Util;
 import com.dragons.aurora.playstoreapiv2.GooglePlayAPI;
 import com.facebook.stetho.Stetho;
 import com.jakewharton.rxrelay2.Relay;
 
-import org.acra.ACRA;
-import org.acra.annotation.AcraCore;
-import org.acra.config.CoreConfigurationBuilder;
-import org.acra.data.StringFormat;
-import org.acra.file.Directory;
+//import org.acra.ACRA;
+//import org.acra.annotation.AcraCore;
+//import org.acra.config.CoreConfigurationBuilder;
+//import org.acra.data.StringFormat;
+//import org.acra.file.Directory;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -53,7 +53,7 @@ import java.util.List;
 
 import io.reactivex.plugins.RxJavaPlugins;
 
-@AcraCore(logcatArguments = {"-t", "200", "-v", "time"})
+//@AcraCore(logcatArguments = {"-t", "200", "-v", "time"})
 public class AuroraApplication extends Application {
 
     public static GooglePlayAPI api = null;
@@ -118,23 +118,23 @@ public class AuroraApplication extends Application {
     }
 
     @SuppressWarnings("unchecked")
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-
-        CoreConfigurationBuilder builder = new CoreConfigurationBuilder(this)
-                .setReportSenderFactoryClasses(AcraReportSenderFactory.class, AcraLogSenderFactory.class)
-                .setBuildConfigClass(BuildConfig.class)
-                .setAlsoReportToAndroidFramework(false)
-                .setApplicationLogFileDir(Directory.EXTERNAL_CACHE)
-                .setApplicationLogFile("Aurora.log")
-                .setReportFormat(StringFormat.KEY_VALUE_LIST);
-
-        builder.setDeleteOldUnsentReportsOnApplicationStart(true);
-        builder.setDeleteUnapprovedReportsOnApplicationStart(true);
-
-        ACRA.init(this, builder);
-    }
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(base);
+//
+//        CoreConfigurationBuilder builder = new CoreConfigurationBuilder(this)
+////                .setReportSenderFactoryClasses(AcraReportSenderFactory.class, AcraLogSenderFactory.class)
+//                .setBuildConfigClass(BuildConfig.class)
+//                .setAlsoReportToAndroidFramework(false)
+//                .setApplicationLogFileDir(Directory.EXTERNAL_CACHE)
+//                .setApplicationLogFile("Aurora.log")
+//                .setReportFormat(StringFormat.KEY_VALUE_LIST);
+//
+//        builder.setDeleteOldUnsentReportsOnApplicationStart(true);
+//        builder.setDeleteUnapprovedReportsOnApplicationStart(true);
+//
+////        ACRA.init(this, builder);
+//    }
 
     @Override
     public void onCreate() {

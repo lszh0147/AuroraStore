@@ -126,8 +126,8 @@ public class AuroraActivity extends BaseActivity {
             if (Util.isCacheObsolete(this))
                 Util.clearCache(this);
 
-            if (Util.shouldCheckUpdate(this) && !SelfUpdateService.isServiceRunning())
-                checkSelfUpdate();
+//            if (Util.shouldCheckUpdate(this) && !SelfUpdateService.isServiceRunning())
+//                checkSelfUpdate();
         }
         checkPermissions();
     }

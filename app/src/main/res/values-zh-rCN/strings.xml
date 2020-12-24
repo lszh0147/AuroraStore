@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name2">"应用商店"</string>
     <string name="account_dummy">"匿名"</string>
     <string name="account_google">"Google 帐号"</string>
     <string name="account_logout">"从 Aurora 登出？"</string>

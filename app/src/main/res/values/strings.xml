@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name2">"App Store"</string>
     <string name="account_dummy">"Anonymous"</string>
     <string name="account_google">"Google"</string>
     <string name="account_logout">"Log out from Aurora?"</string>

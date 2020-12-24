@@ -49,8 +49,8 @@ public class UpdatesPrefFragment extends PreferenceFragmentCompat {
         Preference preferenceUpdate = findPreference(Constants.PREFERENCE_SELF_UPDATE);
         assert preferenceUpdate != null;
         preferenceUpdate.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(context, SelfUpdateService.class);
-            context.startService(intent);
+//            Intent intent = new Intent(context, SelfUpdateService.class);
+//            context.startService(intent);
             return true;
         });
     }
