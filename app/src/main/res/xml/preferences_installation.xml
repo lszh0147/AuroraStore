@@ -26,7 +26,7 @@
         app:title="@string/pref_install_auto_title" />
 
     <SwitchPreferenceCompat
-        app:defaultValue="true"
+        app:defaultValue="false"
         app:key="PREFERENCE_INSTALLATION_DELETE"
         app:summary="@string/pref_install_delete_summary"
         app:title="@string/pref_install_delete_title" />

@@ -293,7 +293,7 @@ public class Util {
     }
 
     public static boolean filterFDroidAppsEnabled(Context context) {
-        return getPrefs(context).getBoolean(Constants.PREFERENCE_FILTER_F_DROID, true);
+        return getPrefs(context).getBoolean(Constants.PREFERENCE_FILTER_F_DROID, false);
     }
 
     public static boolean filterSearchNonPersistent(Context context) {
@@ -319,7 +319,7 @@ public class Util {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && Util.isRootInstallEnabled(context)) {
             return true;
         } else
-            return getPrefs(context).getBoolean(Constants.PREFERENCE_INSTALLATION_DELETE, true);
+            return getPrefs(context).getBoolean(Constants.PREFERENCE_INSTALLATION_DELETE, false);
     }
 
     public static boolean isNativeInstallerEnforced(Context context) {
@@ -415,7 +415,7 @@ public class Util {
     }
 
     public static Downloader.FileDownloaderType getDownloadStrategy(Context context) {
-        String prefValue = getPrefs(context).getString(Constants.PREFERENCE_DOWNLOAD_STRATEGY, "");
+        String prefValue = getPrefs(context).getString(Constants.PREFERENCE_DOWNLOAD_STRATEGY, "1");
         switch (prefValue) {
             case "0":
                 return Downloader.FileDownloaderType.SEQUENTIAL;
